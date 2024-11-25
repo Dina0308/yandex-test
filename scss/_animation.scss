@@ -1,0 +1,22 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: (0);
+        
+    }
+    to {
+        opacity: 1;
+        scale: (1);
+        
+    }
+}
+
+    .about__img, .about__img2, .steps__item {
+        animation-name: fadeIn;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        
+        view-timeline-name: --fade-in-img;
+        animation-timeline: --fade-in-img;
+        animation-range: 20% 40%;
+    }

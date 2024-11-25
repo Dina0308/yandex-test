@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+@import '_vari.scss';
+body {
+    font-family: "Golos Text", sans-serif;
+    color: $text-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
+}
+.container {
+    width: 95%;
+    max-width: 1222px;
+    margin: 0 auto;
+}
+.visually-hidden {
+    opacity: 0;
+    position: absolute;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    width: 1px;
+
+}
+.btn {
+    border-radius: 66px;
+    padding: 20px 49px;
+    height: 72px;
+    text-wrap: balance;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color .3s, color .3s;
+    &_main {
+        background: #1f1f1f;
+        color: #fff;
+        transition: background-color .3s, color .3s;
+        animation: pulse 1.5s infinite;
+        &:hover {
+            background-color: #FBCE51;
+            color: #1f1f1f;
+        }
+    }
+    &_second {
+        border: 2px solid #1f1f1f;
+        color: #1f1f1f;
+        &:hover {
+            background: #1f1f1f;
+            color: #fff;
+        }
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.title {
+    font-size: 54px;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+}
+.mobile {
+    display: none;
+}
+
+@import '_header.scss';
+@import '_promo.scss';
+@import '_about.scss';
+@import '_steps.scss';
+@import '_party.scss';
+@import '_footer.scss';
+@import '_animation.scss';
+
+@import '_media.scss';
